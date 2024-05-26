@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:reclamation_tag/UI/components/custom_TextField.dart';
-import 'package:reclamation_tag/UI/components/custom_button.dart';
-import 'package:reclamation_tag/UI/components/custom_card.dart';
+import 'package:reclamation_tag/src/UI/components/custom_TextField.dart';
+import 'package:reclamation_tag/src/UI/components/custom_button.dart';
+import 'package:reclamation_tag/src/UI/components/custom_card.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -62,7 +62,9 @@ class LoginPage extends StatelessWidget {
                       CustomButton(
                         height: size.height,
                         buttonText: "Sign in",
-                        onPressed: () {context.go('/anomalies');},
+                        onPressed: () {
+                          context.go('/anomalies');
+                        },
                       ),
                       SizedBox(
                         height: size.height * 0.04,

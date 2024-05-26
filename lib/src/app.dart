@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:reclamation_tag/UI/screens/anomalie_list.dart';
-import 'package:reclamation_tag/UI/screens/login_page.dart';
+import 'package:reclamation_tag/src/UI/screens/anomalie_list.dart';
+import 'package:reclamation_tag/src/UI/screens/login_page.dart';
 import 'package:reclamation_tag/design_course/design_course_app_theme.dart';
 import 'package:reclamation_tag/design_course/home_design_course.dart';
 
@@ -32,10 +32,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       routerConfig: _router,
       locale: const Locale('en', 'US'),
-      theme: ThemeData(
-        textTheme: DesignCourseAppTheme.textTheme
-
-      ),
+      theme: ThemeData(textTheme: DesignCourseAppTheme.textTheme),
     );
   }
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:reclamation_tag/design_course/category_list_view.dart';
+import 'package:reclamation_tag/design_course/models/category.dart';
 import 'package:reclamation_tag/design_course/popular_course_list_view.dart';
+import 'package:reclamation_tag/src/UI/screens/create_anomalie.dart';
 import 'package:reclamation_tag/utils/HexColor.dart';
 import 'course_info_screen.dart';
 import 'design_course_app_theme.dart';
@@ -130,7 +132,8 @@ class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
     Navigator.push<dynamic>(
       context,
       MaterialPageRoute<dynamic>(
-        builder: (BuildContext context) => CourseInfoScreen(),
+        builder: (BuildContext context) =>
+            CreateAnomalie(anomalieType: Category.categoryList[0]),
       ),
     );
   }

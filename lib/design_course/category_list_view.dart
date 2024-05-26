@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:reclamation_tag/design_course/models/category.dart';
 import 'package:reclamation_tag/utils/HexColor.dart';
 
@@ -190,7 +191,11 @@ class CategoryView extends StatelessWidget {
                                   const BorderRadius.all(Radius.circular(16.0)),
                               child: AspectRatio(
                                   aspectRatio: 1.0,
-                                  child: Image.asset(category!.imagePath)),
+                                  child: SvgPicture.asset(
+                                    category!.imagePath,
+                                  )
+                                  //Image.asset(category!.imagePath)
+                                  ),
                             )
                           ],
                         ),
