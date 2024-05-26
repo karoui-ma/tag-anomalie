@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:go_router/go_router.dart';
 import 'package:reclamation_tag/UI/screens/anomalie_list.dart';
 import 'package:reclamation_tag/UI/screens/login_page.dart';
+import 'package:reclamation_tag/design_course/design_course_app_theme.dart';
+import 'package:reclamation_tag/design_course/home_design_course.dart';
 
 /// The Widget that configures your application.
 class MyApp extends StatelessWidget {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       ),
       GoRoute(
         path: '/anomalies',
-        builder: (context, state) => AnomalieList(),
+        builder: (context, state) => DesignCourseHomeScreen(),
       )
     ],
   );
@@ -32,6 +32,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       routerConfig: _router,
       locale: const Locale('en', 'US'),
+      theme: ThemeData(
+        textTheme: DesignCourseAppTheme.textTheme
+
+      ),
     );
   }
 }

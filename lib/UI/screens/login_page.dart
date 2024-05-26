@@ -62,7 +62,7 @@ class LoginPage extends StatelessWidget {
                       CustomButton(
                         height: size.height,
                         buttonText: "Sign in",
-                        onPressed: {context.go('/anomalies')},
+                        onPressed: () {context.go('/anomalies');},
                       ),
                       SizedBox(
                         height: size.height * 0.04,

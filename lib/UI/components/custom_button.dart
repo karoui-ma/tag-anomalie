@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 class CustomButton extends StatelessWidget {
   final double height;
   final String buttonText;
-  var onPressed;
+  final VoidCallback? onPressed;
 
   CustomButton(
       {super.key,
